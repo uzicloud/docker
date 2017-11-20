@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r /usr/app/requirements.txt
 RUN pip install uwsgi
 COPY uwsgi-http.ini /usr/app/
 EXPOSE 5001
-CMD uwsgi /usr/app/uwsgi-http.ini
+CMD uwsgi /usr/app/uwsgi-http.ini --buffer-size 32768
