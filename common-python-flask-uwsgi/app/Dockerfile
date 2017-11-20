@@ -1,5 +1,5 @@
 FROM python:2.7-jessie
-
+RUN cp  /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 RUN mkdir -p /usr/app/src
 WORKDIR /usr/app/src
 COPY requirements.txt /usr/app/
